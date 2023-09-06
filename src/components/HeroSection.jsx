@@ -4,21 +4,24 @@ export default function HeroSection() {
   return (
     <section>
       <div className="grid grid-cols-1 lg:grid-cols-12">
-        <div className="col-span-7 place-self-center">
+        <div className="col-span-7 place-self-center text-center sm:text-left">
           <h1 className="text-white mb-10 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
-            ¡Hola! Soy Nahuel
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+              ¡Hola! Me llamo{" "}
+            </span>
+            Nahuel
           </h1>
-          <p className="text-[#ADB7BE] text-lg lg:text-xl mb-6">
+          <p className="text-[#ADB7BE] text-base sm:text-lg lg:text-xl mb-6">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
             dolorum id fuga aut repudiandae sunt voluptatum numquam eum! Hic,
             expedita sunt. Quae, nulla sapiente. Aut sit ducimus iure excepturi
             magni!
           </p>
           <div>
-            <button className="px-6 py-3 rounded-full mr-4 bg-white hover:bg-slate-200 text-black">
+            <button className="px-6 py-3 rounded-full w-full sm:w-fit mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 hover:text-black text-white border border-white">
               hire me
             </button>
-            <button className="px-6 py-3 rounded-full mr-4  transparent hover:bg-slate-200 hover:text-black mt-3 text-white border border-white">
+            <button className="px-6 py-3 rounded-full mr-4  w-full sm:w-fit bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 hover:text-black mt-3 text-white border border-white">
               cv
             </button>
           </div>
