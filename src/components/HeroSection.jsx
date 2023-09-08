@@ -1,5 +1,10 @@
+"use client";
 import React from 'react'
 import Image from 'next/image'
+import { TypeAnimation } from "react-type-animation";
+
+   
+
 export default function HeroSection() {
   return (
     <section>
@@ -7,9 +12,26 @@ export default function HeroSection() {
         <div className="col-span-7 place-self-center text-center sm:text-left">
           <h1 className="text-white mb-10 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-              ¡Hola! Me llamo{" "}
+              ¡Hola! Yo soy{" "}
             </span>
-            Nahuel
+            <br />
+            <TypeAnimation
+              sequence={[
+                // Same substring at the start will only be typed out once, initially
+                "Nahuel",
+                1000, // wait 1s before replacing "Mice" with "Hamsters"
+                "Web developer",
+                1000,
+                "Game Developer",
+                1000,
+                "Creative Code",
+                1000,
+              ]}
+              wrapper="span"
+              speed={50}
+              style={{ fontSize: "0.8em", display: "inline-block" }}
+              repeat={Infinity}
+            />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg lg:text-xl mb-6">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
@@ -22,7 +44,7 @@ export default function HeroSection() {
               hire me
             </button>
             <button className="px-6 py-3 rounded-full mr-4  w-full sm:w-fit bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 hover:text-black mt-3 text-white border border-white">
-              cv
+              <span className=""> cv </span>
             </button>
           </div>
         </div>
