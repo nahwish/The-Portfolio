@@ -1,17 +1,97 @@
 "use client";
 import React,{ useTransition, useState} from 'react';
 import Image from "next/image";
+import { TabButton } from './TabButton';
+import  {skills}  from '../utils/TableSkills';
+
+const SKILLS_DATA = [
+  {
+    title: "Educación",
+    id: "education",
+    content: (
+      <table class="table-auto">
+        <thead>
+          <tr className="border-b  border-b-indigo-900">
+            <th className="p-3 padding-4px bg-stone-900 ">Institución</th>
+            <th className="p-3 padding-4px bg-stone-900">Año</th>
+            <th className="p-3 padding-4px bg-stone-900">Ver</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="">
+            <td className="p-3 padding-4px bg-stone-700">Henry</td>
+            <td className="p-3 padding-4px bg-stone-700 ">2021</td>
+            <td className="p-3 padding-4px bg-stone-700 ">Link</td>
+          </tr>
+        </tbody>
+      </table>
+    ),
+  },
+  {
+    title: "Skills",
+    id: "skills",
+    content: (
+      <table class="table-auto">
+        <thead>
+          <tr className="border-b  border-b-indigo-900">
+            <th className="p-3 padding-4px bg-stone-900 ">Tecnologia</th>
+            <th className="p-3 padding-4px bg-stone-900">Projectos</th>
+            <th className="p-3 padding-4px bg-stone-900"></th>
+          </tr>
+        </thead>
+        <tbody>
+          {skills?.map(({ icon, tecnologi, style, styleHover }, index) => (
+            <tr className="" key={index}>
+              <td className={style}>{tecnologi}</td>
+              <td
+                className={`${style} hover:bg-stone-900 hover:cursor-pointer`}
+                onClick={() => alert("debe llevarme a projectos")}
+              >
+                Ver
+              </td>
+              <td className={style}>
+                {<Image src={icon} width={50} height={30} />}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    ),
+  },
+  {
+    title: "Certificaciones",
+    id: "certification",
+    content: (
+      <table class="table-auto">
+        <thead>
+          <tr className="border-b  border-b-indigo-900">
+            <th className="p-3 padding-4px bg-stone-900 ">Institución</th>
+            <th className="p-3 padding-4px bg-stone-900">Año</th>
+            <th className="p-3 padding-4px bg-stone-900">Ver</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="">
+            <td className="p-3 padding-4px bg-stone-700">Henry</td>
+            <td className="p-3 padding-4px bg-stone-700 ">2021</td>
+            <td className="p-3 padding-4px bg-stone-700 ">Link</td>
+          </tr>
+        </tbody>
+      </table>
+    ),
+  },
+];
 
 export const AboutSection = () => {
   const [tab, setTab] = useState("skills");
-  const [startTransition, isPending] = useTransition();
+  const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) =>{
     startTransition(()=>{
       setTab(id);
     })
   }
-  
+
   return (
     <section className="text-white">
       <div className="md:grid md:grid-cols-2 gap-4 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
@@ -25,9 +105,27 @@ export const AboutSection = () => {
             quibusdam ad. Doloremque, harum.
           </p>
           <div className="flex flex-row mt-8">
-            <span className="mr-3 font-semibold hover:text-white text-[#ADB7BE] border-b border-purple-500">Skills</span>
-            <span>Educación</span>
-            <span>Experiencia</span>
+            <TabButton
+              selecTab={() => handleTabChange("skills")}
+              active={tab === "skills"}
+            >
+              Skills
+            </TabButton>
+            <TabButton
+              selecTab={() => handleTabChange("education")}
+              active={tab === "education"}
+            >
+              Educación
+            </TabButton>
+            <TabButton
+              selecTab={() => handleTabChange("certification")}
+              active={tab === "certification"}
+            >
+              Certicifaciones
+            </TabButton>
+          </div>
+          <div className="mt-8">
+            {SKILLS_DATA.find((t) => t.id === tab).content}
           </div>
         </div>
       </div>
