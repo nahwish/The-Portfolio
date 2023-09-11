@@ -4,7 +4,7 @@ const NavLink = ({ href, title }) => {
   return (
     <Link
       href={href}
-      className=" block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white"
+      className=" block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl   hover:text-[#BFFF00] shadow-inner shadow-black rounded-full border-2 bg-[#181818] border-[#151515] "
     >
       {<span className="blur-none">{title}</span>}
     </Link>

@@ -41,9 +41,12 @@ export const NavBar = () => {
           )}
         </div>
         <div className="menu block md:auto border-top-30 " id="navbar">
-          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+          <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0 ">
             {navLink.map((link, index) => (
-              <li key={index}>
+              <li
+                key={index}
+                
+              >
                 <NavLink href={link.path} title={link.title} />
               </li>
             ))}

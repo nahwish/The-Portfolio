@@ -2,6 +2,7 @@
 import React,{ useTransition, useState} from 'react';
 import Image from "next/image";
 import { TabButton } from './TabButton';
+import { ArrowDownCircleIcon } from "@heroicons/react/20/solid";
 import  {skills}  from '../utils/TableSkills';
 
 const SKILLS_DATA = [
@@ -35,22 +36,22 @@ const SKILLS_DATA = [
         <thead>
           <tr className="border-b  border-b-indigo-900">
             <th className="p-3 padding-4px bg-stone-900 ">Tecnologia</th>
+            <th className="p-3 padding-4px bg-stone-900"><ArrowDownCircleIcon width={50}/></th>
             <th className="p-3 padding-4px bg-stone-900">Projectos</th>
-            <th className="p-3 padding-4px bg-stone-900"></th>
           </tr>
         </thead>
         <tbody>
           {skills?.map(({ icon, tecnologi, style, styleHover }, index) => (
             <tr className="" key={index}>
               <td className={style}>{tecnologi}</td>
+              <td className={style}>
+                {<Image src={icon} width={50} height={30} />}
+              </td>
               <td
                 className={`${style} hover:bg-stone-900 hover:cursor-pointer`}
                 onClick={() => alert("debe llevarme a projectos")}
               >
                 Ver
-              </td>
-              <td className={style}>
-                {<Image src={icon} width={50} height={30} />}
               </td>
             </tr>
           ))}
@@ -96,7 +97,7 @@ export const AboutSection = () => {
     <section className="text-white">
       <div className="md:grid md:grid-cols-2 gap-4 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image src="/image/about.jpg" width={400} height={400} />
-        <div>
+        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">Sobre mi</h2>
           <p className="text-base lg:text-lg">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolor
