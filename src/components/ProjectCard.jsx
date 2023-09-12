@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
   return (
-    <div>
+    <div className="">
       <div
-        className="h-52 md:h-72 rounded-t-xl relative group"
+        className="h-52 md:h-72 rounded-t-xl m-3 border relative group border-4   bg-[#181818] border-[#1c1c1c]"
         style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
       >
         <div className="overlay flex items-center justify-center   absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500">
@@ -24,7 +24,7 @@ export const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) 
           </Link>
         </div>
       </div>
-      <div className="mt-3 text-white rounded-b-xl bg-[#181818] py-6 px-4">
+      <div className="mt-3 text-white rounded-b-3xl bg-[#170b3b3c] py-6 px-4 shadow-inner shadow-black  border-2 bg-[#181818] border-[#151515]">
         <h5 className="text-xl font-semibold mb-2">{title}</h5>
         <p className="text-[#ADB7BE]">{description}</p>
       </div>

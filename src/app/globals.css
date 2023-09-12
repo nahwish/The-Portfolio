@@ -1,12 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2? family= Black+Ops+One & family= Poppins:ital,wght@1,200 & display=swap');
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --background-primary:#121212;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,7 +17,9 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
+table{
+  background-color: var(--background-primary);
+}
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -25,5 +28,14 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+/* PAGE PROJECT */
+.project-text{
+
+ 
+}
+#animation{
+  text-shadow: 5px 10px rgba(0, 0, 0, 0.703);
+  
 }
 

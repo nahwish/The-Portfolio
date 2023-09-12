@@ -3,7 +3,7 @@ import React from 'react'
 export const ProjectTag = ({ name,onClick, isSelected}) => {
   const buttonStyles = isSelected
     ? "   shadow-md text-[#BFFF00] border-2 border-[#151515]"
-    : " shadow-[#2E2E2E]    shadow-inner  cursor-pointer";
+    : " shadow shadow-black  cursor-pointer";
   return (
     <span
       className={
@@ -13,7 +13,7 @@ export const ProjectTag = ({ name,onClick, isSelected}) => {
       }
     >
       <button
-        className={`${buttonStyles} px-6 py-3 text-xl rounded-full`}
+        className={`${buttonStyles} px-6 py-2 text-sm rounded-full`}
         onClick={() => onClick(name)}
       >
         {name}
