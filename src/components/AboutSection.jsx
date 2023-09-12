@@ -32,26 +32,27 @@ const SKILLS_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <table class="table-auto">
-        <thead>
-          <tr className="border-b  border-b-indigo-900">
-            <th className="p-3 padding-4px bg-stone-900 ">Tecnologia</th>
-            <th className="p-3 padding-4px bg-stone-900"><ArrowDownCircleIcon width={50}/></th>
-            <th className="p-3 padding-4px bg-stone-900">Projectos</th>
+      <table class="table-auto ">
+        <thead className="">
+          <tr className="shadow-inner  shadow-black   bg-[#170b3b3c] border-[#151515]">
+            <th className="p-3 padding-4px   ">Tecnologia</th>
+            <th className="p-3 padding-4px ">
+              <ArrowDownCircleIcon width={50} />
+            </th>
+            <th className="p-5 ">Projectos</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="">
           {skills?.map(({ icon, tecnologi, style, styleHover }, index) => (
             <tr className="" key={index}>
               <td className={style}>{tecnologi}</td>
-              <td className={style}>
+              <td className="p-5">
                 {<Image src={icon} width={50} height={30} />}
               </td>
-              <td
-                className={`${style} hover:bg-stone-900 hover:cursor-pointer`}
-                onClick={() => alert("debe llevarme a projectos")}
-              >
-                Ver
+              <td onClick={() => alert("debe llevarme a projectos")}>
+                <button className="text-center rounded-full bg-[#181818] shadow-black w-full p-1 shadow cursor-pointer">
+                  Ver
+                </button>
               </td>
             </tr>
           ))}

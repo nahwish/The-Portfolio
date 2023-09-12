@@ -2,7 +2,8 @@
 
 let styleToHover =
   "cursor-pointer hover:bg-stone-900 text-center p-3 padding-3px bg-stone-800";
-let styleWithoutHover = " text-center p-3 padding-3px bg-stone-800";
+let styleWithoutHover =
+  " text-center p-2 padding-3px  bg-stone-800 shadow-inner shadow-black bg-[#170b3b3c]  border-2 border-[#151515]";
 export const skills = [
   {
     tecnologi: "React",
