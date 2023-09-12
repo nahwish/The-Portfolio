@@ -13,7 +13,7 @@ export const ProjectTag = ({ name,onClick, isSelected}) => {
       }
     >
       <button
-        className={`${buttonStyles} px-6 py-3 text-xl rounded-full`}
+        className={`${buttonStyles} px-6 py-2 text-sm rounded-full`}
         onClick={() => onClick(name)}
       >
         {name}
