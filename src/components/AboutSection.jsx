@@ -47,7 +47,7 @@ const SKILLS_DATA = [
 ];
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("skills");
+  const [tab, setTab] = useState("education");
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
@@ -58,7 +58,7 @@ const AboutSection = () => {
 
   return (
     <>
-      <section className="text-white md:grid md:grid-cols-2 gap-4 pt-8 pb-0 px-7">
+      <section id="about" className="text-white md:grid md:grid-cols-2 gap-4 pt-8 pb-0 ">
         <Image
           src="/image/about.jpg"
           width={400}

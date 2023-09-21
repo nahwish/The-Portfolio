@@ -11,8 +11,8 @@ export async function POST(req,res) {
   const {email,subject,message} = body;
   try {
     const data = await resend.emails.send({
-      from: fromEmail,
-      to: ["nadaro@outlook.com", email],
+      from: "nahudaro@gmail.com",
+      to: ["nadaro@outlook.com"],
       subject: subject,
       react: (
         <>
@@ -22,9 +22,12 @@ export async function POST(req,res) {
           <p>{message}</p>
         </>
       ),
+      text:""
     });
 
-    return NextResponse.json(data);
+    console.log(data)
+    // return NextResponse.json(data);
+    return NextResponse.json({message:"email enviado"});
   } catch (error) {
     return NextResponse.json({ error });
   }

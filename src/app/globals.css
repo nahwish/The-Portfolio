@@ -30,9 +30,10 @@ body {
     rgb(var(--background-start-rgb));
 }
 /* PAGE PROJECT */
-.project-text{
-
- 
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* Oculta la barra de navegación */
+  }
 }
 #animation{
   text-shadow: 5px 10px rgba(0, 0, 0, 0.703);

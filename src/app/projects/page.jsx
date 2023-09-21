@@ -61,7 +61,7 @@ const ProjectsSection = () => {
     animate: { y: 0, opacity: 1 },
   };
   return (
-    <section>
+    <section id="projects">
       <h2 className="text-center project-text mt-24 mx-auto px-12 py-4 text-4xl font-bold text-white mb-2 bg-[#121212]">
         Mis Projectos
       </h2>
