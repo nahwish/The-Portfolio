@@ -6,14 +6,15 @@ import {motion} from "framer-motion"
 
 export default function HeroSection() {
   return (
-    <section>
+    <section id="home" className="">
       <div className="grid grid-cols-1 lg:grid-cols-12 ">
-        <motion.div 
-        initial={{opacity:0}}
-        animate={{ opacity : 1 }}
-        transition={{ duration:1}}
-        className="col-span-7 place-self-center text-center ">
-          <h1 className="text-white  shadow-inner shadow-black rounded-full border-2 bg-[#170b3b3c] border-[#151515] mb-10 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="col-span-7 place-self-center text-center "
+        >
+          <h1 className="text-white  py-4 shadow-inner shadow-black rounded-full border-2 bg-[#170b3b3c] border-[#151515] mb-10 text-4xl sm:text-5xl lg:text-4xl font-extrabold">
             <span
               id="yosoy"
               className="  font-bold text-transparent p-3 bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600"
@@ -51,7 +52,7 @@ export default function HeroSection() {
             expedita sunt. Quae, nulla sapiente. Aut sit ducimus iure excepturi
             magni!
           </p>
-          <div>
+          <div className="pt-20 pb-20">
             <button className=" hover:text-[#BFFF00] px-6 py-3  w-full sm:w-fit mr-4  shadow shadow-black mb-2 rounded-full border-2 bg-[#181818] border-[#151515]">
               hire me
             </button>
@@ -63,7 +64,7 @@ export default function HeroSection() {
         <div className="col-span-5 place-self-center mt-4 lg:mt-0">
           <div
             id="personalFoto"
-            className=" bg-[#170b3b3c] w-[250px] h-[250px] relative lg:w-[400px] lg:h-[400px] shadow-inner shadow-black rounded-full border-2 border-[#151515]"
+            className=" bg-[#170b3b3c] w-[250px] h-[250px] relative lg:w-[300px] lg:h-[400px] shadow-inner shadow-black rounded-full border-2 border-[#151515]"
           >
             <Image
               src="/image/fotico.jpeg"
@@ -71,7 +72,7 @@ export default function HeroSection() {
               height={150}
               alt="personal-image"
               id="personalFoto"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 "
             />
           </div>
         </div>
