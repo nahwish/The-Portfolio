@@ -75,7 +75,7 @@ export const NavBar = () => {
                   className={`hover:text-[#BFFF00] `}
                 >
                   <Link
-                    active={true}
+                    active={"true"}
                     to={link.path}
                     spy={true}
                     smooth={true}

@@ -1,41 +1,46 @@
-"use client"
-import React,{useState} from 'react'
-import GithubIcon from "../../public/image/tecnologies/github.png"
+"use client";
+import React, { useState } from "react";
+import GithubIcon from "../../public/image/tecnologies/github.png";
 import LinkeinIcon from "../../public/image/tecnologies/linkedin.png";
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 
 export const EmailSection = () => {
+  const [emailSubmmited, setEmailSubmmited] = useState();
 
-  const [ emailSubmmited,setEmailSubmmited ] = useState();
-
-  const handleSubmit = async (e) =>{
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
       email: e.target.email.value,
       subject: e.target.subject.value,
-      message: e.target.message.value
-    }
+      message: e.target.message.value,
+    };
     const JSONdata = JSON.stringify(data);
+    
     const endpoint = "/api/send";
     const options = {
-      method:'POST',
-      headers:{
-        'Content-Type': "application/json",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
       },
       body: JSONdata,
-    }
+    };
     const response = await fetch(endpoint, options);
+    
+    console.log("resData-->", response);
+
     const resData = await response.json();
-    if(response.status === 200){
-      console.log("--> ENVIADO!")
-      setEmailSubmmited(true)
+    setEmailSubmmited(true);
+    if (response.status === 200) {
+      console.log("--> ENVIADO!");
     }
-  }
+  };
+
+
   return (
     <section
       id="contac"
-       className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
+      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
     >
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900 to-transparent rounded-full h-80 w-80 blur-lg z-0 absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-5">
@@ -104,7 +109,9 @@ export const EmailSection = () => {
               placeholder="Hola que tal"
             />
           </div>
-          <button className="shadow-black shadow  cursor-pointer px-6 py-3 text-xl w-full font-medium hover:text-[#BFFF00]">
+          <button 
+          type="submit"
+          className="shadow-black shadow  cursor-pointer px-6 py-3 text-xl w-full font-medium hover:text-[#BFFF00]">
             send
           </button>
           {emailSubmmited && (
@@ -114,4 +121,4 @@ export const EmailSection = () => {
       </div>
     </section>
   );
-}
+};
