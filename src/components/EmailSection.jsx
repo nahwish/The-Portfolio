@@ -5,8 +5,11 @@ import LinkeinIcon from "../../public/image/tecnologies/linkedin.png";
 import Link from "next/link";
 import Image from "next/image";
 
+
 export const EmailSection = () => {
   const [emailSubmmited, setEmailSubmmited] = useState();
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,21 +18,20 @@ export const EmailSection = () => {
       subject: e.target.subject.value,
       message: e.target.message.value,
     };
-    const JSONdata = JSON.stringify(data);
     
     const endpoint = "/api/send";
-    const options = {
+
+    const response = await fetch(endpoint, {
       method: "POST",
+      body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSONdata,
-    };
-    const response = await fetch(endpoint, options);
+    });
     
     console.log("resData-->", response);
 
-    const resData = await response.json();
+    // const resData = await response.json();
     setEmailSubmmited(true);
     if (response.status === 200) {
       console.log("--> ENVIADO!");
@@ -61,7 +63,10 @@ export const EmailSection = () => {
         </div>
       </div>
       <div className="border-4 border-[#1c1c1c] p-4 shadow-xl shadow-black ">
-        <form className="flex flex-col " onSubmit={handleSubmit}>
+        <form
+          className="flex flex-col "
+          onSubmit={handleSubmit}
+        >
           <div className="mb-6">
             <label
               htmlFor="email"
@@ -109,9 +114,10 @@ export const EmailSection = () => {
               placeholder="Hola que tal"
             />
           </div>
-          <button 
-          type="submit"
-          className="shadow-black shadow  cursor-pointer px-6 py-3 text-xl w-full font-medium hover:text-[#BFFF00]">
+          <button
+            type="submit"
+            className="shadow-black shadow  cursor-pointer px-6 py-3 text-xl w-full font-medium hover:text-[#BFFF00]"
+          >
             send
           </button>
           {emailSubmmited && (
