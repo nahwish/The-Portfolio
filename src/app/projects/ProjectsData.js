@@ -1,0 +1,43 @@
+export const projectsData = [
+  {
+    id: 1,
+    title: "Portfolio",
+    description: " una descripcón lore ipsum",
+    image: "/image/projects/mercado.png",
+    gitUrl: "/",
+    tag: ["All", "Web", "Nextjs, Tailwind", "React"],
+    previewUrl: "/",
+    hashtag: ["#Javascript", "#React", "#Redux"],
+  },
+
+  {
+    id: 2,
+    title: "Juego",
+    description: " una descripcón lore ipsum",
+    image: "/image/projects/mix.png",
+    gitUrl: "/",
+    tag: ["All", "Mobile", "Javascript"],
+    previewUrl: "/",
+    hashtag: ["#Javascript", "#React", "#"],
+  },
+  {
+    id: 3,
+    title: "Juego",
+    description: " una descripcón lore ipsum",
+    image: "/image/projects/mix.png",
+    gitUrl: "/",
+    tag: ["All", "Web"],
+    previewUrl: "/",
+    hashtag: ["#Javascript", "#React", "#Tailwind"],
+  },
+  {
+    id: 4,
+    title: "Portfolio",
+    description: " una descripcón lore ipsum",
+    image: "/image/projects/mercado.png",
+    gitUrl: "/",
+    tag: ["All", "Game"],
+    previewUrl: "/",
+    hashtag: ["#Javascript", "#React", "#Next"],
+  },
+];

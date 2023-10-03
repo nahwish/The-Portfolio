@@ -4,59 +4,14 @@ import { ProjectCard } from "../../components/ProjectCard";
 import { ProjectTag } from "../../components/ProjectTag";
 import { motion, useInView } from "framer-motion";
 import { useTab } from "../../../context/TabContext";
+import { projectsData } from "./ProjectsData";
 
-const projectsData = [
-  {
-    id: 1,
-    title: "Portfolio",
-    description: " una descripcón lore ipsum",
-    image: "/image/projects/mercado.png",
-    gitUrl: "/",
-    tag: ["All", "Web", "Nextjs, Tailwind", "React"],
-    previewUrl: "/",
-    hashtag: ["#Javascript", "#React", "#Redux"],
-  },
-
-  {
-    id: 2,
-    title: "Juego",
-    description: " una descripcón lore ipsum",
-    image: "/image/projects/mix.png",
-    gitUrl: "/",
-    tag: ["All", "Mobile", "Javascript"],
-    previewUrl: "/",
-    hashtag: ["#Javascript", "#React", "#"],
-  },
-  {
-    id: 3,
-    title: "Juego",
-    description: " una descripcón lore ipsum",
-    image: "/image/projects/mix.png",
-    gitUrl: "/",
-    tag: ["All", "Web"],
-    previewUrl: "/",
-    hashtag: ["#Javascript", "#React", "#Tailwind"],
-  },
-  {
-    id: 4,
-    title: "Portfolio",
-    description: " una descripcón lore ipsum",
-    image: "/image/projects/mercado.png",
-    gitUrl: "/",
-    tag: ["All", "Game"],
-    previewUrl: "/",
-    hashtag: ["#Javascript", "#React", "#Next"],
-  },
-];
 
 const ProjectsSection = () => {
   const ref = useRef(null);
   const isView = useInView(ref, { once: true });
   const { tag, handleTagChange } = useTab();
-  // const [tag, setTag] = useState("All");
-  // const handleTagChange = (newTag) => {
-  //   setTag(newTag);
-  // };
+
   const filteredProjects = projectsData.filter((project) =>
     project.tag.includes(tag)
   );
