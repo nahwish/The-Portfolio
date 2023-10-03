@@ -2,52 +2,33 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import { TabButton } from "./TabButton";
-import { ArrowDownCircleIcon } from "@heroicons/react/20/solid";
+import { useTab } from "../../context/TabContext"
 import {
   skills,
   tableSkills,
   tableEducation,
   education,
 } from "../utils/TableSkills";
+
 import { TableSkills } from "@/components/TableSkills";
 
-const SKILLS_DATA = [
-  {
-    title: "Educación",
-    id: "education",
-    content: <TableSkills skills={education} info={tableEducation} />,
-  },
-  {
-    title: "Skills",
-    id: "skills",
-    content: <TableSkills skills={skills} info={tableSkills} />,
-  },
-  {
-    title: "Certificaciones",
-    id: "certification",
-    content: (
-      <table class="table-auto">
-        <thead>
-          <tr className="border-b  border-b-indigo-900">
-            <th className="p-3 padding-4px bg-stone-900 ">Institución</th>
-            <th className="p-3 padding-4px bg-stone-900">Año</th>
-            <th className="p-3 padding-4px bg-stone-900">Ver</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr className="">
-            <td className="p-3 padding-4px bg-stone-700">Henry</td>
-            <td className="p-3 padding-4px bg-stone-700 ">2021</td>
-            <td className="p-3 padding-4px bg-stone-700 ">Link</td>
-          </tr>
-        </tbody>
-      </table>
-    ),
-  },
-];
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("education");
+  // const [tab, setTab] = useState("education");
+  const { tab, setTab } = useTab();
+  const SKILLS_DATA = [
+    {
+      title: "Educación",
+      id: "education",
+      content: <TableSkills skills={education} info={tableEducation} />,
+    },
+    {
+      title: "Skills",
+      id: "skills",
+      content: <TableSkills skills={skills} info={tableSkills} />,
+    },
+  
+  ];
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
@@ -58,7 +39,10 @@ const AboutSection = () => {
 
   return (
     <>
-      <section id="about" className="text-white md:grid md:grid-cols-2 gap-4 pt-8 pb-0 ">
+      <section
+        id="about"
+        className="text-white md:grid md:grid-cols-2 gap-4 pt-8 pb-0 "
+      >
         <Image
           src="/image/about.jpg"
           width={400}
@@ -79,26 +63,24 @@ const AboutSection = () => {
       </section>
       <div className="flex flex-row  justify-center ">
         <TabButton
-          selecTab={() => handleTabChange("skills")}
-          active={tab === "skills"}
-        >
-          Skills
-        </TabButton>
-        <TabButton
           selecTab={() => handleTabChange("education")}
           active={tab === "education"}
+          name="education"
+          setTab={false}
         >
           Educación
         </TabButton>
         <TabButton
-          selecTab={() => handleTabChange("certification")}
-          active={tab === "certification"}
+          selecTab={() => handleTabChange("skills")}
+          active={tab === "skills"}
+          name="skills"
+          setTab={setTab}
         >
-          Certicifaciones
+          Skills
         </TabButton>
       </div>
       <div className="mt-8">
-        {SKILLS_DATA.find((t) => t.id === tab).content}
+        {SKILLS_DATA.find((t) => t.id === tab)?.content}
       </div>
     </>
   );

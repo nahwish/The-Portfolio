@@ -11,8 +11,9 @@ const projectsData = [
     description: " una descripcón lore ipsum",
     image: "/image/projects/mercado.png",
     gitUrl: "/",
-    tag: ["All", "Web"],
+    tag: ["All", "Web", "Nextjs, Tailwind", "React"],
     previewUrl: "/",
+    tecnologies: ["Nextjs, Tailwind", "React"],
   },
 
   {
