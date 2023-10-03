@@ -3,6 +3,7 @@ import React, { useState, useRef } from "react";
 import { ProjectCard } from "../../components/ProjectCard";
 import { ProjectTag } from "../../components/ProjectTag";
 import { motion, useInView } from "framer-motion";
+import { useTab } from "../../../context/TabContext";
 
 const projectsData = [
   {
@@ -13,7 +14,7 @@ const projectsData = [
     gitUrl: "/",
     tag: ["All", "Web", "Nextjs, Tailwind", "React"],
     previewUrl: "/",
-    tecnologies: ["Nextjs, Tailwind", "React"],
+    hashtag: ["#Javascript", "#React", "#Redux"],
   },
 
   {
@@ -22,8 +23,9 @@ const projectsData = [
     description: " una descripcón lore ipsum",
     image: "/image/projects/mix.png",
     gitUrl: "/",
-    tag: ["All", "Mobile"],
+    tag: ["All", "Mobile", "Javascript"],
     previewUrl: "/",
+    hashtag: ["#Javascript", "#React", "#"],
   },
   {
     id: 3,
@@ -33,6 +35,7 @@ const projectsData = [
     gitUrl: "/",
     tag: ["All", "Web"],
     previewUrl: "/",
+    hashtag: ["#Javascript", "#React", "#Tailwind"],
   },
   {
     id: 4,
@@ -42,17 +45,18 @@ const projectsData = [
     gitUrl: "/",
     tag: ["All", "Game"],
     previewUrl: "/",
+    hashtag: ["#Javascript", "#React", "#Next"],
   },
 ];
 
 const ProjectsSection = () => {
-  const [tag, setTag] = useState("All");
   const ref = useRef(null);
   const isView = useInView(ref, { once: true });
-
-  const handleTagChange = (newTag) => {
-    setTag(newTag);
-  };
+  const { tag, handleTagChange } = useTab();
+  // const [tag, setTag] = useState("All");
+  // const handleTagChange = (newTag) => {
+  //   setTag(newTag);
+  // };
   const filteredProjects = projectsData.filter((project) =>
     project.tag.includes(tag)
   );
@@ -85,7 +89,10 @@ const ProjectsSection = () => {
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map(
-          ({ id, description, title, image, gitUrl, previewUrl }, index) => (
+          (
+            { id, description, title, image, gitUrl, previewUrl, hashtag },
+            index
+          ) => (
             <motion.li
               key={index}
               animate={isView ? "animate" : "initial"}
@@ -100,6 +107,7 @@ const ProjectsSection = () => {
                 imgUrl={image}
                 gitUrl={gitUrl}
                 previewUrl={previewUrl}
+                hashtag={hashtag}
               />
             </motion.li>
           )

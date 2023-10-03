@@ -1,34 +1,13 @@
 "use client";
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
-import { TabButton } from "./TabButton";
-import { useTab } from "../../context/TabContext"
-import {
-  skills,
-  tableSkills,
-  tableEducation,
-  education,
-} from "../utils/TableSkills";
-
-import { TableSkills } from "@/components/TableSkills";
+import { TabButton } from "../TabButton";
+import SkillsData from "./SkillsData";
 
 
 const AboutSection = () => {
-  // const [tab, setTab] = useState("education");
-  const { tab, setTab } = useTab();
-  const SKILLS_DATA = [
-    {
-      title: "Educación",
-      id: "education",
-      content: <TableSkills skills={education} info={tableEducation} />,
-    },
-    {
-      title: "Skills",
-      id: "skills",
-      content: <TableSkills skills={skills} info={tableSkills} />,
-    },
-  
-  ];
+  const [tab, setTab] = useState("education");
+
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
@@ -80,7 +59,7 @@ const AboutSection = () => {
         </TabButton>
       </div>
       <div className="mt-8">
-        {SKILLS_DATA.find((t) => t.id === tab)?.content}
+        <SkillsData tab={tab}/>
       </div>
     </>
   );

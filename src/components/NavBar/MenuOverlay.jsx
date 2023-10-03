@@ -2,7 +2,13 @@ import React from 'react'
 import { Link } from 'react-scroll';
 
 
-export const MenuOverlay = ({links}) => {
+export const MenuOverlay = () => {
+  const links = [
+    { title: "Home", path: "home" },
+    { title: "Sobre mi", path: "about" },
+    { title: "Projectos", path: "projects" },
+    { title: "Contactos", path: "contac" },
+  ];
   return (
     <ul className="flex flex-col py-4 items-center ">
       {links.map((link, index) => (

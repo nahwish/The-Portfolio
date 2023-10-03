@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import  AboutSection  from "@/components/AboutSection";
+import AboutSection from "@/components/About";
 import HeroSection from "@/components/HeroSection";
 import { NavBar } from "@/components/NavBar";
-import  ProjectsSection  from "@/app/projects/page";
+import ProjectsSection from "@/app/projects/page";
 import { EmailSection } from "@/components/EmailSection";
 import { Footer } from "@/components/Footer";
 import { TabProvider } from "../../context/TabContext";
@@ -15,7 +15,7 @@ export default function Home() {
         <div className="container mt-10 mx-auto px-12 py-4">
           <TabProvider>
             <HeroSection />
-            <AboutSection id="about"/>
+            <AboutSection id="about" />
             <ProjectsSection />
             <EmailSection />
           </TabProvider>
