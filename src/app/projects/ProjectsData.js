@@ -1,13 +1,14 @@
 export const projectsData = [
   {
     id: 1,
-    title: "Portfolio",
-    description: " una descripcón lore ipsum",
-    image: "/image/projects/mercado.png",
-    gitUrl: "/",
-    tag: ["All", "Web", "Nextjs, Tailwind", "React"],
+    title: "eyCommerce",
+    description: `En este proyecto me centré en el diseño de la pagina, la cual es responsive.
+    Utilicé React para la visualización, react router para la navegación, tailwind para los estilos`,
+    image: "/image/projects/shopi.png",
+    gitUrl: "https://github.com/nahwish/EyCommerce",
+    tag: ["All", "Web", "Javascript", "React", "Tailwind"],
     previewUrl: "/",
-    hashtag: ["#Javascript", "#React", "#Redux"],
+    hashtag: ["#Javascript", "#React", "#Tailwin"],
   },
 
   {

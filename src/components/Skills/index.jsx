@@ -9,8 +9,8 @@ export const TableSkills = (props) => {
   const { file_01, file_02, file_03 } = info;
 
   return (
-    <div className="bg-[#170b3b3c] flex justify-center items-center text-center p-2 padding-3px   shadow shadow-black   border-2 border-[#151515]">
-      <table className="shadow-2xl font-[Poppins] border-2  border-b-2 border-black  shadow-black">
+    <div className="bg-[#170b3b3c]  text-center p-2 padding-3px   shadow-inner shadow-black  border-2 border-[#151515]">
+      <table className=" font-[Poppins]   border-b-2  shadow shadow-black mb-2  border-2 bg-[#181818] border-[#151515]">
         <thead className="text-white">
           <tr>
             <th className="py-3 ">{file_01}</th>
@@ -24,7 +24,7 @@ export const TableSkills = (props) => {
               className="shadow border-b-2 border-black  shadow-black"
               key={index}
             >
-              <Table skl={skl}/>
+              <Table skl={skl} />
               <td className="py-3 px-6">
                 <Button skl={skl} />
               </td>

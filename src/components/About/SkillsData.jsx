@@ -16,7 +16,7 @@ const SKILLS_DATA = [
   ];
 
   const SkillsData = ({tab}) =>{
-    return SKILLS_DATA.find((t) => t.id === tab)?.content;
+    return <div>{SKILLS_DATA.find((t) => t.id === tab)?.content}</div>;
   }
 
   export default SkillsData;

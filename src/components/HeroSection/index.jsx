@@ -68,6 +68,7 @@ export default function HeroSection() {
           >
             <Image
               src="/image/fotico.jpeg"
+              priority={true}
               width={150}
               height={150}
               alt="personal-image"
