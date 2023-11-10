@@ -10,7 +10,7 @@ import { projectsData } from "./ProjectsData";
 const ProjectsSection = () => {
   const ref = useRef(null);
   const isView = useInView(ref, { once: true });
-  const { tag, handleTagChange } = useTab();
+  const { tag, handleTagChange } = useTab([]);
 
   const filteredProjects = projectsData.filter((project) =>
     project.tag.includes(tag)
@@ -21,7 +21,8 @@ const ProjectsSection = () => {
     animate: { y: 0, opacity: 1 },
   };
   return (
-    <section id="projects">
+    <section id="projects" className="">
+      
       <h2 className="text-center project-text mt-24 mx-auto px-12 py-4 text-4xl font-bold text-white mb-2 bg-[#121212]">
         Mis Projectos
       </h2>
@@ -42,7 +43,7 @@ const ProjectsSection = () => {
           isSelected={tag === "Game"}
         />
       </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      <ul ref={ref} className="grid md:grid-cols-3 gap-4 md:gap-12">
         {filteredProjects.map(
           (
             { id, description, title, image, gitUrl, previewUrl, hashtag },
@@ -55,6 +56,7 @@ const ProjectsSection = () => {
               initial="initial"
               transition={{ duration: 0.3, delay: index * 0.4 }}
             >
+              <div className="">
               <ProjectCard
                 key={id}
                 title={title}
@@ -64,6 +66,8 @@ const ProjectsSection = () => {
                 previewUrl={previewUrl}
                 hashtag={hashtag}
               />
+
+              </div>
             </motion.li>
           )
         )}

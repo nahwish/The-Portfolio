@@ -32,7 +32,7 @@ export const EmailSection = () => {
         </div>
       </div>
       <div className="border-4 border-[#1c1c1c] p-4 shadow-xl shadow-black ">
-        <Form/>
+        <Form />
       </div>
     </section>
   );

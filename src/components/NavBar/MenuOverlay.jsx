@@ -12,7 +12,7 @@ export const MenuOverlay = () => {
   return (
     <ul className="flex flex-col py-4 items-center ">
       {links.map((link, index) => (
-        <li key={index}>
+        <li key={index} className="py-4 font-black">
           <Link
             to={link.path}
             spy={true}

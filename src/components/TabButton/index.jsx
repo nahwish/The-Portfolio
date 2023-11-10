@@ -7,7 +7,7 @@ export const TabButton = ({active,selecTab,children}) => {
   
   return (
     <button onClick={selecTab}>
-      <p className={`mr-3 font-semibold hover:text-white ${buttonClasses}`}>
+      <p className={`mr-3 font-semibold p-5 hover:text-white ${buttonClasses}`}>
       {children}
       </p>
     </button>

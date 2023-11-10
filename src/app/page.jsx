@@ -10,7 +10,7 @@ import { TabProvider } from "../../context/TabContext";
 export default function Home() {
   return (
     <main className="flex min-h-screen bg-[#121212] flex-col">
-      <div className="container mx-auto px-12 py-12 ">
+      <div className="container mx-auto  py-12 ">
         <NavBar />
         <div className="container mt-10 mx-auto px-12 py-4">
           <TabProvider>
