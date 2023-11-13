@@ -7,7 +7,7 @@ En este porfolio encontrarás algunos proyectos en los que estuve trabajando en 
 En Signup tenés la posibilidad de crear una cuenta, puede ser ficticia, lo importantes es que la recuerdes
 ya que se almacenará en la base de datos y guardará tus notas personales, pudiendo administrar varios usuarios.
 
-<img src="./public/image/projects/porfolio.png" alt="porfolio">
+<img src="./public/image/projects/portfolio.png" alt="porfolio">
 
 
 <hr/>
