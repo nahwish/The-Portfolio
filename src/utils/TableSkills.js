@@ -88,4 +88,9 @@ export const education = [
       file_02: "/image/tecnologies/node.png",
       file_03: "ver",
     },
+    {
+      file_01: "Unity",
+      file_02: "/image/tecnologies/unity.png",
+      file_03: "ver",
+    },
   ];

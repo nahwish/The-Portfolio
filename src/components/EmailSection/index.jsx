@@ -15,12 +15,11 @@ export const EmailSection = () => {
     >
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900 to-transparent rounded-full h-80 w-80 blur-lg z-0 absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-5">
-        <h5 className="text-xl font-bold text-white my-2">Lets Connect</h5>
+        <h5 className="text-xl font-bold text-white my-2">¿Hablamos?</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae
-          corrupti, ullam, assumenda architecto, asperiores deserunt accusamus
-          voluptates et aspernatur veritatis molestias aliquid natus ipsam!
-          Quaerat consequuntur fuga sapiente rerum ratione.
+          ¿Querés charlar? ¿Querés que trabajemos juntos? ¿Querés simplemente saludar?
+
+          ¡Hablemos! 🤓
         </p>
         <div className="socials flex flex-row gap-2">
           <Link href="github.com">

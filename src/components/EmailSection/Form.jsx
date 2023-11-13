@@ -34,7 +34,7 @@ const [emailSubmmited, setEmailSubmmited] = useState();
           htmlFor="email"
           className="text-white block  text-sm mb-2 font-medium"
         >
-          Your mail
+          Email
         </label>
         <input
           name="email"
@@ -42,7 +42,7 @@ const [emailSubmmited, setEmailSubmmited] = useState();
           id="email"
           required
           className="placeholder-[#9CA2A9] text-gray-100 text-sm block w-full p-2.5 shadow-inner  shadow-black  border-4 bg-[#170b3b3c] border-[#1c1c1c] focus:bg-[#2E2E2E] focus:none"
-          placeholder="jacob@gmail.com"
+          placeholder="tuEmail@ejemplo.com"
         />
       </div>
       <div className="mb-6">
@@ -50,7 +50,7 @@ const [emailSubmmited, setEmailSubmmited] = useState();
           htmlFor="subject"
           className="text-white block  mb-2 text-sm font-medium"
         >
-          Subject
+          Asunto
         </label>
         <input
           name="subject"
@@ -58,7 +58,7 @@ const [emailSubmmited, setEmailSubmmited] = useState();
           id="subject"
           required
           className="placeholder-[#9CA2A9] text-gray-100 text-sm  block w-full p-2.5 shadow-inner  shadow-black  border-4 bg-[#170b3b3c] border-[#1c1c1c] focus:bg-[#2E2E2E] focus:none"
-          placeholder="quiero decir hola"
+          placeholder="Búsquedas abiertas"
         />
       </div>
       <div className="mb-6">
@@ -67,20 +67,20 @@ const [emailSubmmited, setEmailSubmmited] = useState();
           className="text-white block text-sm mb-2 font-medium"
         >
           {" "}
-          Message
+          Mensaje
         </label>
         <textarea
           name="message"
           id="message"
           className="placeholder-[#9CA2A9] text-gray-100 text-sm  block w-full p-2.5 shadow-inner  shadow-black  border-4 bg-[#170b3b3c] border-[#1c1c1c] focus:bg-[#2E2E2E] focus:none"
-          placeholder="Hola que tal"
+          placeholder="Hola! ¿Cómo estás?"
         />
       </div>
       <button
         type="submit"
         className="shadow-black shadow  cursor-pointer px-6 py-3 text-xl w-full font-medium hover:text-[#BFFF00]"
       >
-        send
+        Enviar
       </button>
       {emailSubmmited && (
         <p class=" text-green text-sm mt-2">Mensaje enviado! 😊</p>
