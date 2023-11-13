@@ -7,30 +7,30 @@ En este porfolio encontrarás algunos proyectos en los que estuve trabajando en 
 En Signup tenés la posibilidad de crear una cuenta, puede ser ficticia, lo importantes es que la recuerdes
 ya que se almacenará en la base de datos y guardará tus notas personales, pudiendo administrar varios usuarios.
 
-<img src="./public/porfolio.png" alt="porfolio">
+<img src="./public/projects/porfolio.png" alt="porfolio">
 
 
 <hr/>
-<img src="./public/Funny-Crash.png" alt="imagen del juego funnycrash">
+<img src="./public/projects/Funny-Crash.png" alt="imagen del juego funnycrash">
 
 <hr/>
 Una vez creada tu cuenta podrás acceder a la app y verás el listado de tareas pendientes:
 Aquí podrás agregar o eliminar tareas, actualizarlas (si las quieres) y marcar como
 completadas.
 
-<img src="./public/labyrinth.png" alt="imagen del juego labyrinth">
+<img src="./public/projects/labyrinth.png" alt="imagen del juego labyrinth">
 
-<img src="./public/Todo-App.png" alt="imagen de la apliación">
+<img src="./public/projects/Todo-App.png" alt="imagen de la apliación">
 
 <hr/>
 Podrás agregar tareas y asignarle una categoria. lugo podrás filtrar por la cartegoria deseada.
 
-<img src="./public/Shopi-App.png" alt="imagen de la apliación Shopi app">
+<img src="./public/projects/Shopi-App.png" alt="imagen de la apliación Shopi app">
 
 <hr/>
 También podras borrar los registros, o marcar como completadas.
 
-<img src="./public/Travel-App.png" alt="imagen de la apliación travel app">
+<img src="./public/projects/Travel-App.png" alt="imagen de la apliación travel app">
 
 <hr/>
 
