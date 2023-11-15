@@ -30,10 +30,10 @@ const AboutSection = () => {
           alt="about"
         />
         <p className=" pt-8 pb-0 py-10">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus
-          blanditiis assumenda voluptas dolore maiores nostrum accusamus,
-          impedit quae voluptatem, pariatur doloribus officia. Porro ea corrupti
-          illum, quasi ratione accusantium optio.
+          Motivado por encontrar soluciones creativas y altamente efectivas, mi
+          enfoque se centra en la creación de experiencias digitales innovadoras
+          que trasciendan los límites convencionales de la web y el
+          entretenimiento interactivo.
         </p>
       </section>
       <div className="flex flex-row  justify-center ">
