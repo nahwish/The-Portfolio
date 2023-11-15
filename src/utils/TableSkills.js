@@ -5,14 +5,14 @@ let styleToHover =
 let styleWithoutHover =
   " text-center p-2 padding-3px  bg-stone-800 shadow-inner shadow-black bg-[#170b3b3c]  border-2 border-[#151515]";
 export const tableSkills = {
-  file_01: "tecnologia",
-  file_02 : "icon",
-  file_03: "projecto",
+  file_01: "Tecnología",
+  file_02 : "",
+  file_03: "Proyecto",
 
 }
 
 export const tableEducation = {
-  file_01: "institución",
+  file_01: "Institución",
   file_02: "año",
   file_03: "ver",
 };
@@ -91,6 +91,11 @@ export const education = [
     {
       file_01: "Unity",
       file_02: "/image/tecnologies/unity.png",
+      file_03: "ver",
+    },
+    {
+      file_01: "Jest",
+      file_02: "/image/tecnologies/jest.png",
       file_03: "ver",
     },
   ];
