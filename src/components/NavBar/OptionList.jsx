@@ -7,7 +7,7 @@ const OptionList = (props) => {
 
   const navLink = [
     { title: "Sobre mi", path: "about" },
-    { title: "Projectos", path: "projects" },
+    { title: "Proyectos", path: "projects" },
     { title: "Contactos", path: "contac" },
   ];
   return (
