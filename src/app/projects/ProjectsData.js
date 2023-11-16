@@ -7,7 +7,7 @@ export const projectsData = [
     image: "/image/projects/Shopi-App.png",
     gitUrl: "https://github.com/nahwish/EyCommerce",
     tag: ["All", "Web", "Javascript", "React", "Tailwind"],
-    previewUrl: "/",
+    previewUrl: "https://shop-qqvddehro-nahuels-projects.vercel.app/",
     hashtag: ["#Javascript", "#React", "#Tailwind", "#ContextApi"],
   },
 
@@ -46,7 +46,8 @@ export const projectsData = [
     image: "/image/projects/Travel-App.png",
     gitUrl: "https://github.com/nahwish/travel-app",
     tag: ["All", "Web", "Tailwind", "React", "TypeScript", "Javascript"],
-    previewUrl: "/",
+    previewUrl:
+      "https://travel-app-fr8a-hbo0dt7z3-nahuels-projects.vercel.app/",
     hashtag: ["#Javascript", "#React", "#Tailwind", "#TypeScript"],
   },
   {
